@@ -5,7 +5,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.crm.qa.bases.base_class;
+import com.crm.qa.bases.Base_class;
 import com.qa.crm.pages.Calender;
 import com.qa.crm.pages.Calls;
 import com.qa.crm.pages.Campaign;
@@ -19,7 +19,7 @@ import com.qa.crm.pages.Home_Page;
 import com.qa.crm.pages.Tasks;
 import com.qa.crm.pages.login;
 
-public class HomePage_Test extends base_class
+public class HomePage_Test extends Base_class
 {
 	Home_Page hp;
 	login ln;

@@ -5,9 +5,9 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.crm.qa.bases.base_class;
+import com.crm.qa.bases.Base_class;
 
-public class Home_Page extends base_class
+public class Home_Page extends Base_class
 {
 	@FindBy(xpath = "//span[contains(text(),'Rabi Ranjan Kumar')]")
 	WebElement name;

@@ -5,9 +5,16 @@
     <classes>
       <class name="com.qa.crm.testcases.HomePage_Test">
         <methods>
+          <include name="emails_click"/>
           <include name="finish"/>
           <include name="SetUP"/>
+          <include name="Calls_click"/>
+          <include name="contacts_click"/>
+          <include name="username_test"/>
           <include name="Calender_click"/>
+          <include name="verifytitle_test"/>
+          <include name="Deals_click"/>
+          <include name="Documents_click"/>
         </methods>
       </class> <!-- com.qa.crm.testcases.HomePage_Test -->
     </classes>

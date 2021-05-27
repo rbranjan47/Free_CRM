@@ -4,9 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.crm.qa.bases.base_class;
+import com.crm.qa.bases.Base_class;
 
-public class login extends base_class
+public class login extends Base_class
 {
 	//defining PAGE FACTORY----> Object Repository
 	

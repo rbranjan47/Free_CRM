@@ -5,13 +5,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.crm.qa.bases.base_class;
+import com.crm.qa.bases.Base_class;
 import com.qa.crm.pages.Home_Page;
 import com.qa.crm.pages.login;
 
 
 
-public class loginPage_test extends base_class
+public class loginPage_test extends Base_class
 {
 	login ln;
 	Home_Page Homepage;

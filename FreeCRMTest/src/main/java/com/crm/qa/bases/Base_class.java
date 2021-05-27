@@ -19,13 +19,13 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.crm.qa.util.utiltest;
 
 
-public class base_class
+public class Base_class
 {
 	public static WebDriver driver=null;
 	public static Properties prop;
 	public static WebDriverWait wait;
 	
-	public base_class() 
+	public Base_class() 
 	{
 		try
 		{

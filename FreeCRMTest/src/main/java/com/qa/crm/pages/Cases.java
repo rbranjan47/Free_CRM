@@ -1,8 +1,8 @@
 package com.qa.crm.pages;
 
-import com.crm.qa.bases.base_class;
+import com.crm.qa.bases.Base_class;
 
-public class Cases extends base_class
+public class Cases extends Base_class
 {
 
 }

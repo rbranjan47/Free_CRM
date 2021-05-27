@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import com.crm.qa.bases.base_class;
+import com.crm.qa.bases.Base_class;
 
-public class Contacts extends base_class 
+public class Contacts extends Base_class 
 {
 	Home_Page hp;
 	//when we have more elements, then we passing directly not by Page factor
