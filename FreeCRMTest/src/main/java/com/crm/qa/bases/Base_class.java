@@ -18,59 +18,49 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.crm.qa.util.utiltest;
 
-
-public class Base_class
-{
-	public static WebDriver driver=null;
+public class Base_class {
+	public static WebDriver driver = null;
 	public static Properties prop;
 	public static WebDriverWait wait;
-	
-	public Base_class() 
-	{
-		try
-		{
-			prop= new Properties();
-			FileInputStream file=new FileInputStream("C:\\Users\\Lenovo\\eclipse-workspace\\FreeCRMTest\\src\\main\\java\\com"
-					+ "\\qa\\crm\\config\\Config.properties");
+
+	public Base_class() {
+		try {
+			prop = new Properties();
+			FileInputStream file = new FileInputStream(
+					"C:\\Users\\Lenovo\\eclipse-workspace\\FreeCRMTest\\src\\main\\java\\com"
+							+ "\\qa\\crm\\config\\Config.properties");
 			prop.load(file);
-		}
-		catch(FileNotFoundException e)
-		{
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		 catch(IOException e)
-		{
-			 e.printStackTrace();
-		}	
 	}
-	public static void initialization()
-	{
-		String browsername=prop.getProperty("browser");
-		
-		if (browsername.equals("chrome"))
-		{
-			//setting the path of chrome driver
+
+	public static void initialization() {
+		String browsername = prop.getProperty("browser");
+
+		if (browsername.equals("chrome")) {
+			// setting the path of chrome driver
 			System.setProperty("webdriver.chrome.driver", "G:\\chromedriver\\chromedriver.exe");
-			driver =new ChromeDriver();
+			driver = new ChromeDriver();
 		}
-		
-		else if(browsername.equals("firefox"))
-		{
+
+		else if (browsername.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver", "‪G:\\geckodriver-v0.27.0-win64\\geckodriver.exe");
-			driver=new FirefoxDriver();
+			driver = new FirefoxDriver();
 		}
-		
-		else if(browsername.equals("internetexplorer"))
-		{
+
+		else if (browsername.equals("internetexplorer")) {
 			System.setProperty("webrdriver.ie.driver", "G:\\IE_Driver\\msedgedriver.exe");
-			driver=new InternetExplorerDriver();
+			driver = new InternetExplorerDriver();
 		}
-		
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(utiltest.Time_out, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(utiltest.Page_Loadout, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
-	
+
 		driver.get(prop.getProperty("url"));
 	}
 }
